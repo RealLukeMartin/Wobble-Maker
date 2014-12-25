@@ -1,0 +1,75 @@
+/* line 1, ../sass/style.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #34495e;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 8, ../sass/style.scss */
+.trigger {
+  width: 100px;
+  padding: 20px 0;
+  text-align: center;
+  background: #2ecc71;
+  margin: 10px;
+  border-radius: 5px;
+  float: left;
+  font-size: 18px;
+  box-shadow: inset 1px 1px 1px #333;
+}
+
+/* line 19, ../sass/style.scss */
+#offToggle {
+  background-color: #e74c3c;
+}
+
+/* line 22, ../sass/style.scss */
+#modulate {
+  background-color: #3498db;
+}
+
+/* line 25, ../sass/style.scss */
+form {
+  clear: both;
+  margin: 10px;
+}
+/* line 28, ../sass/style.scss */
+form input[type="range"] {
+  display: block;
+}
+
+/* line 32, ../sass/style.scss */
+#mod, label[for="mod"], #modFreq, label[for="modFreq"] {
+  display: none;
+}
+/* line 34, ../sass/style.scss */
+#mod.show, label[for="mod"].show, #modFreq.show, label[for="modFreq"].show {
+  display: block;
+}
+
+/* line 39, ../sass/style.scss */
+#freq.hide, label[for="freq"].hide {
+  display: none;
+}
+
+/* line 43, ../sass/style.scss */
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: #3498db;
+  width: 200px;
+  height: 20px;
+  margin: 10px 0;
+  box-shadow: inset 1px 1px 1px #333;
+}
+
+/* line 52, ../sass/style.scss */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #333;
+}

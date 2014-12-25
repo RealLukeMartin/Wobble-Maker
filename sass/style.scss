@@ -1,0 +1,59 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	background: #34495e;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+.trigger {
+	width: 100px;
+	padding: 20px 0;
+	text-align: center;
+	background: #2ecc71;
+	margin: 10px;
+	border-radius: 5px;
+	float: left;
+	font-size: 18px;
+	box-shadow: inset 1px 1px 1px #333;
+}
+#offToggle {
+	background-color: #e74c3c;
+}
+#modulate {
+	background-color: #3498db;
+}
+form {
+	clear: both;
+	margin: 10px;
+	input[type="range"] {
+		display: block;
+	}
+}
+#mod, label[for="mod"], #modFreq, label[for="modFreq"] {
+	display: none;
+	&.show {
+		display: block
+	}
+}
+#freq, label[for="freq"] {
+  &.hide {	
+	display: none;
+  }
+}
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: #3498db;
+    width: 200px;
+    height:20px;
+    margin: 10px 0;
+    box-shadow: inset 1px 1px 1px #333;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #e74c3c;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow:1px 1px 1px #333;
+}
