@@ -1,4 +1,9 @@
 /* line 1, ../sass/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 2, ../sass/style.scss */
 html, body {
   padding: 0;
   margin: 0;
@@ -7,7 +12,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
 }
 
-/* line 8, ../sass/style.scss */
+/* line 9, ../sass/style.scss */
 .trigger {
   width: 100px;
   padding: 20px 0;
@@ -20,41 +25,41 @@ html, body {
   box-shadow: inset 1px 1px 1px #333;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 #offToggle {
   background-color: #e74c3c;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 #modulate {
   background-color: #3498db;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 form {
   clear: both;
   margin: 10px;
 }
-/* line 28, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 form input[type="range"] {
   display: block;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 #mod, label[for="mod"], #modFreq, label[for="modFreq"] {
   display: none;
 }
-/* line 34, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 #mod.show, label[for="mod"].show, #modFreq.show, label[for="modFreq"].show {
   display: block;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 #freq.hide, label[for="freq"].hide {
   display: none;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 input[type=range] {
   -webkit-appearance: none;
   background-color: #3498db;
@@ -64,7 +69,7 @@ input[type=range] {
   box-shadow: inset 1px 1px 1px #333;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #e74c3c;
@@ -72,4 +77,52 @@ input[type="range"]::-webkit-slider-thumb {
   height: 30px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px #333;
+}
+
+/* line 62, ../sass/style.scss */
+#keyboard {
+  list-style: none;
+}
+/* line 64, ../sass/style.scss */
+#keyboard li {
+  float: left;
+  width: 50px;
+  height: 100px;
+  background: #fff;
+  border-right: 1px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 0 #ddd;
+}
+/* line 73, ../sass/style.scss */
+#keyboard li:hover {
+  opacity: 0.75;
+}
+/* line 76, ../sass/style.scss */
+#keyboard li.sharp {
+  width: 30px;
+  height: 60px;
+  background: #000;
+  position: absolute;
+  z-index: 5;
+}
+/* line 83, ../sass/style.scss */
+#keyboard li.sharp.first {
+  left: 75px;
+}
+/* line 86, ../sass/style.scss */
+#keyboard li.sharp.second {
+  left: 125px;
+}
+/* line 89, ../sass/style.scss */
+#keyboard li.sharp.third {
+  left: 225px;
+}
+/* line 92, ../sass/style.scss */
+#keyboard li.sharp.fourth {
+  left: 275px;
+}
+/* line 95, ../sass/style.scss */
+#keyboard li.sharp.fifth {
+  left: 325px;
 }

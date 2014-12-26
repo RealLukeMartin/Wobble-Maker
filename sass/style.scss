@@ -1,3 +1,4 @@
+* { box-sizing: border-box; }
 html, body {
 	padding: 0;
 	margin: 0;
@@ -57,3 +58,47 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     box-shadow:1px 1px 1px #333;
 }
+//Keyboard
+#keyboard {
+  list-style: none;
+  li {
+  	float: left;
+  	width: 50px;
+  	height: 100px;
+  	background: #fff;
+  	border-right: 1px solid #000;
+  	cursor: pointer;
+  	border-radius: 5px;
+  	box-shadow: 0.5px 1px 0 #ddd;
+  	&:hover {
+  		opacity: 0.75;
+  	}
+  	&.sharp {
+  		width: 30px;
+  		height: 60px;
+  		background: #000;
+  		position: absolute;
+  		z-index: 5;
+
+  		&.first {
+  			left: 75px;
+  		}
+  		&.second {
+  			left: 125px
+  		}
+  		&.third {
+  			left: 225px;
+  		}
+  		&.fourth {
+  			left: 275px;
+  		}
+  		&.fifth {
+  			left: 325px;
+  		}
+  	}
+  }
+}
+
+
+
+
