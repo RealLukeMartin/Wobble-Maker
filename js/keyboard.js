@@ -105,4 +105,4 @@ $('#offToggle').click(function() {
     off();
 });
 
-})()
+})();
