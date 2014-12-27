@@ -5,7 +5,7 @@ function setKeys(el) {
 	var f = 0;
 
 	for (i=0; i<keyboard.length; i++) { 
-		keyboard[i][1] = 130.81 * Math.pow(a,i);
+		keyboard[i][1] = 261.63 * Math.pow(a,i);
 	    if (el == keyboard[i][0]) {
 			console.log(keyboard[i][1]);
 			f = keyboard[i][1];
