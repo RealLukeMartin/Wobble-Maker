@@ -40,7 +40,7 @@ function off() {
 }
 
 // Modulate with an LFO on the gainNode
-function modulate() {
+function modulate(freq) {
     if (qualify === 1) {
     	off();
     }
@@ -51,7 +51,8 @@ function modulate() {
 	lfo = context.createOscillator();
 	gain = context.createGain();
 
-	oscillator.frequency.value = parseInt(modFreqRange.value) * 8.8;
+    console.log(freq);  
+	oscillator.frequency.value = freq;
     lfo.frequency.value = parseInt(modRange.value) * 0.08;
 	oscillator.connect(gain);
 	lfo.connect(gain.gain);
@@ -73,9 +74,9 @@ document.getElementById('freq').addEventListener('input', function() {
 document.getElementById('offToggle').addEventListener('click', function() {
   off();
 });
-document.getElementById('modulate').addEventListener('click', function() {
-  modulate();
-});
+// document.getElementById('modulate').addEventListener('click', function() {
+//   modulate();
+// });
 modRange.addEventListener('input', function() {
   modulate();
 }); 
