@@ -11,7 +11,7 @@ function startOsc() {
 	if (qualify === 1) {
 	  	off();
     }
-    $('#freq, label[for="freq"]').removeClass('hide');
+    //$('#freq, label[for="freq"]').removeClass('hide');
     $('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').removeClass('show');
 		// Create OscillatorNode
 		oscillator = context.createOscillator(); // Sound Source
@@ -53,7 +53,7 @@ function modulate(freq) {
 
     console.log(freq);  
 	oscillator.frequency.value = freq;
-	oscillator.type = 'square';
+	oscillator.type = 'sawtooth';
     lfo.frequency.value = parseInt(modRange.value) * 0.08;
 	oscillator.connect(gain);
 	lfo.connect(gain.gain);
