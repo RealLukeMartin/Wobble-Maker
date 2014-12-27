@@ -1,3 +1,13 @@
+(function(){
+
+// Create audio container
+var context = new AudioContext();
+var oscillator, gain, lfo;
+var qualify = 0;
+var freqRange = document.getElementById('freq');
+var modFreqRange = document.getElementById('modFreq');
+var modRange = document.getElementById('mod');
+
 
 function playKey(freq) {
 	if (qualify === 1) {
@@ -7,7 +17,7 @@ function playKey(freq) {
 	$('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').removeClass('show');
 		// Create OscillatorNode
 		oscillator = context.createOscillator(); // Sound Source
-		oscillator.type = 'sawtooth'; // Sine Wave
+		oscillator.type = 'sawtooth'; // Sawtooth Wave
 		oscillator.frequency.value = freq;
 		oscillator.start(0);
 
@@ -21,7 +31,6 @@ function playKey(freq) {
 
 		//Limit the Oscillator to only one instance
 		qualify = 1;
-
 }
 //Set frequency value for each piano key
 function setKeys(el) {
@@ -41,10 +50,37 @@ function setKeys(el) {
 	else {
 		playKey(liFreq);
 	}
-
+}
+// Stop sound of oscillator
+function off() {
+	oscillator.stop(0);
+	oscillator.disconnect();
+    // Zero instances of Oscillator at this point
+	qualify = 0;
 }
 
+// Modulate with an LFO on the gainNode
+function modulate(freq) {
+    if (qualify === 1) {
+    	off();
+    }
+    $('#mod, label[for="mod"]').addClass('show');
+    oscillator = context.createOscillator();
+	lfo = context.createOscillator();
+	gain = context.createGain();
 
+    console.log(freq);  
+	oscillator.frequency.value = freq;
+	oscillator.type = 'sawtooth';
+    lfo.frequency.value = parseInt(modRange.value) * 0.08;
+	oscillator.connect(gain);
+	lfo.connect(gain.gain);
+	gain.connect(context.destination);
+	oscillator.start(0);
+	lfo.start(0);
+	qualify = 1;
+}
+// ---- Event Listeners ---- //
 $('li').click(function() {
   targetKey = this.id;
   setKeys(targetKey);
@@ -62,6 +98,11 @@ $('#modulate').click(function() {
 	  	modulate(liFreq);
 	}
 });
+$('#mod').change(function() {
+  modulate(liFreq);
+});
 $('#offToggle').click(function() {
     off();
 });
+
+})()
