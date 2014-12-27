@@ -15,7 +15,7 @@ html, body {
 	border-radius: 5px;
 	float: left;
 	font-size: 18px;
-	box-shadow: inset 1px 1px 1px #333;
+	//box-shadow: inset 1px 1px 1px #333;
 }
 #offToggle {
 	background-color: #e74c3c;
@@ -47,7 +47,7 @@ input[type=range] {
     width: 200px;
     height:20px;
     margin: 10px 0;
-    box-shadow: inset 1px 1px 1px #333;
+    //box-shadow: inset 1px 1px 1px #333;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -56,7 +56,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    box-shadow:1px 1px 1px #333;
+    //box-shadow:1px 1px 1px #333;
 }
 //Keyboard
 #keyboard {
@@ -68,8 +68,10 @@ input[type="range"]::-webkit-slider-thumb {
   	background: #fff;
   	border-right: 1px solid #000;
   	cursor: pointer;
-  	border-radius: 5px;
-  	box-shadow: 0.5px 1px 0 #ddd;
+  	border-radius: 3px;
+  	border-top-left-radius: 0px;
+  	border-top-right-radius: 0px;
+  	//box-shadow: 0.5px 1px 0 #ddd;
   	&:hover {
   		opacity: 0.75;
   	}

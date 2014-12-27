@@ -22,7 +22,6 @@ html, body {
   border-radius: 5px;
   float: left;
   font-size: 18px;
-  box-shadow: inset 1px 1px 1px #333;
 }
 
 /* line 20, ../sass/style.scss */
@@ -66,7 +65,6 @@ input[type=range] {
   width: 200px;
   height: 20px;
   margin: 10px 0;
-  box-shadow: inset 1px 1px 1px #333;
 }
 
 /* line 53, ../sass/style.scss */
@@ -76,7 +74,6 @@ input[type="range"]::-webkit-slider-thumb {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 1px 1px 1px #333;
 }
 
 /* line 62, ../sass/style.scss */
@@ -91,14 +88,15 @@ input[type="range"]::-webkit-slider-thumb {
   background: #fff;
   border-right: 1px solid #000;
   cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0.5px 1px 0 #ddd;
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
-/* line 73, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #keyboard li:hover {
   opacity: 0.75;
 }
-/* line 76, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 #keyboard li.sharp {
   width: 30px;
   height: 60px;
@@ -106,23 +104,23 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   z-index: 5;
 }
-/* line 83, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #keyboard li.sharp.first {
   left: 75px;
 }
-/* line 86, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 #keyboard li.sharp.second {
   left: 125px;
 }
-/* line 89, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #keyboard li.sharp.third {
   left: 225px;
 }
-/* line 92, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 #keyboard li.sharp.fourth {
   left: 275px;
 }
-/* line 95, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 #keyboard li.sharp.fifth {
   left: 325px;
 }
