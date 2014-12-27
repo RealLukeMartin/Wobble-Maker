@@ -41,12 +41,13 @@ form {
 	display: none;
   }
 }
-input[type=range] {
+input[type="range"] {
     -webkit-appearance: none;
     background-color: #3498db;
     width: 200px;
     height:20px;
     margin: 10px 0;
+    border-radius: 5px;
     //box-shadow: inset 1px 1px 1px #333;
 }
 
@@ -61,6 +62,9 @@ input[type="range"]::-webkit-slider-thumb {
 //Keyboard
 #keyboard {
   list-style: none;
+  position: relative;
+  padding: 0;
+  margin-left: 10px;
   li {
   	float: left;
   	width: 50px;
@@ -83,19 +87,19 @@ input[type="range"]::-webkit-slider-thumb {
   		z-index: 5;
 
   		&.first {
-  			left: 75px;
+  			left: 35px;
   		}
   		&.second {
-  			left: 125px
+  			left: 85px
   		}
   		&.third {
-  			left: 225px;
+  			left: 185px;
   		}
   		&.fourth {
-  			left: 275px;
+  			left: 235px;
   		}
   		&.fifth {
-  			left: 325px;
+  			left: 285px;
   		}
   	}
   }

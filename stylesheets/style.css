@@ -59,15 +59,16 @@ form input[type="range"] {
 }
 
 /* line 44, ../sass/style.scss */
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   background-color: #3498db;
   width: 200px;
   height: 20px;
   margin: 10px 0;
+  border-radius: 5px;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #e74c3c;
@@ -76,11 +77,14 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 #keyboard {
   list-style: none;
+  position: relative;
+  padding: 0;
+  margin-left: 10px;
 }
-/* line 64, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 #keyboard li {
   float: left;
   width: 50px;
@@ -92,11 +96,11 @@ input[type="range"]::-webkit-slider-thumb {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
-/* line 75, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #keyboard li:hover {
   opacity: 0.75;
 }
-/* line 78, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 #keyboard li.sharp {
   width: 30px;
   height: 60px;
@@ -104,23 +108,23 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   z-index: 5;
 }
-/* line 85, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 #keyboard li.sharp.first {
-  left: 75px;
+  left: 35px;
 }
-/* line 88, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 #keyboard li.sharp.second {
-  left: 125px;
+  left: 85px;
 }
-/* line 91, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 #keyboard li.sharp.third {
-  left: 225px;
+  left: 185px;
 }
-/* line 94, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 #keyboard li.sharp.fourth {
-  left: 275px;
+  left: 235px;
 }
-/* line 97, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 #keyboard li.sharp.fifth {
-  left: 325px;
+  left: 285px;
 }
