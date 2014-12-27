@@ -63,6 +63,7 @@ function modulate() {
 
 
 // ---- Event Listeners ---- //
+
 document.getElementById('onToggle').addEventListener('click', function() {
   startOsc();
 });
