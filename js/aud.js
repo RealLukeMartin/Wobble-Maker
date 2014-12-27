@@ -44,8 +44,8 @@ function modulate(freq) {
     if (qualify === 1) {
     	off();
     }
-    $('#freq, label[for="freq"]').addClass('hide');
-    $('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').addClass('show');
+    //$('#freq, label[for="freq"]').addClass('hide');
+    $('#mod, label[for="mod"]').addClass('show');
 
     oscillator = context.createOscillator();
 	lfo = context.createOscillator();
@@ -65,21 +65,10 @@ function modulate(freq) {
 
 // ---- Event Listeners ---- //
 
-document.getElementById('onToggle').addEventListener('click', function() {
-  startOsc();
-});
-document.getElementById('freq').addEventListener('input', function() {
-  startOsc();
-});
+
 document.getElementById('offToggle').addEventListener('click', function() {
   off();
 });
-// document.getElementById('modulate').addEventListener('click', function() {
-//   modulate();
-// });
 modRange.addEventListener('input', function() {
-  modulate();
-}); 
-modFreqRange.addEventListener('input', function() {
   modulate();
 }); 
