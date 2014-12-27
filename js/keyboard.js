@@ -7,7 +7,7 @@ function playKey(freq) {
 	$('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').removeClass('show');
 		// Create OscillatorNode
 		oscillator = context.createOscillator(); // Sound Source
-		oscillator.type = 0; // Sine Wave
+		oscillator.type = 'sawtooth'; // Sine Wave
 		oscillator.frequency.value = freq;
 		oscillator.start(0);
 
@@ -29,7 +29,7 @@ function setKeys(el) {
 	var a = (Math.pow(2, 1/12));
     liFreq = 0;
     for (i=0; i<keyboard.length; i++) { 
-		keyboard[i][1] = 261.63 * Math.pow(a,i);
+		keyboard[i][1] = 65.41 * Math.pow(a,i);
 	    if (el == keyboard[i][0]) {
 			console.log(keyboard[i][1]);
 			liFreq = keyboard[i][1];
@@ -61,4 +61,7 @@ $('#modulate').click(function() {
 	  $(this).addClass('modded');
 	  	modulate(liFreq);
 	}
+});
+$('#offToggle').click(function() {
+    off();
 });

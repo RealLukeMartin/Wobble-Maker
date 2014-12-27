@@ -53,6 +53,7 @@ function modulate(freq) {
 
     console.log(freq);  
 	oscillator.frequency.value = freq;
+	oscillator.type = 'square';
     lfo.frequency.value = parseInt(modRange.value) * 0.08;
 	oscillator.connect(gain);
 	lfo.connect(gain.gain);
@@ -65,10 +66,6 @@ function modulate(freq) {
 
 // ---- Event Listeners ---- //
 
-
-document.getElementById('offToggle').addEventListener('click', function() {
-  off();
+$('#mod').change(function() {
+  modulate(liFreq);
 });
-modRange.addEventListener('input', function() {
-  modulate();
-}); 
