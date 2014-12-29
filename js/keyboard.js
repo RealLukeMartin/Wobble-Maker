@@ -15,22 +15,22 @@ function playKey(freq) {
 	}
 	$('#freq, label[for="freq"]').removeClass('hide');
 	$('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').removeClass('show');
-		// Create OscillatorNode
-		oscillator = context.createOscillator(); // Sound Source
-		oscillator.type = 'sawtooth'; // Sawtooth Wave
-		oscillator.frequency.value = freq;
-		oscillator.start(0);
+	// Create OscillatorNode
+	oscillator = context.createOscillator(); // Sound Source
+	oscillator.type = 'sawtooth'; // Sawtooth Wave
+	oscillator.frequency.value = freq;
+	oscillator.start(0);
 
-		// Create GainNode
-		gain = context.createGain();
-		gain.gain.value = 1; // Set gain to full volume
+	// Create GainNode
+	gain = context.createGain();
+	gain.gain.value = 1; // Set gain to full volume
 
-		// Connect the Nodes
-		oscillator.connect(gain);
-		gain.connect(context.destination);
+	// Connect the Nodes
+	oscillator.connect(gain);
+	gain.connect(context.destination);
 
-		//Limit the Oscillator to only one instance
-		qualify = 1;
+	//Limit the Oscillator to only one instance
+	qualify = 1;
 }
 //Set frequency value for each piano key
 function setKeys(el) {
