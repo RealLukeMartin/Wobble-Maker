@@ -36,9 +36,10 @@ function playKey(freq) {
 function setKeys(el) {
 	var keyboard = [['c',0],['cs',0],['d',0],['ds',0],['e',0],['f',0],['fs',0],['g',0],['gs',0],['a',0],['as',0],['b',0]];
 	var a = (Math.pow(2, 1/12));
+	var f0 = 65.41;
     liFreq = 0;
     for (i=0; i<keyboard.length; i++) { 
-		keyboard[i][1] = 65.41 * Math.pow(a,i);
+		keyboard[i][1] = f0 * Math.pow(a,i);
 	    if (el == keyboard[i][0]) {
 			console.log(keyboard[i][1]);
 			liFreq = keyboard[i][1];
