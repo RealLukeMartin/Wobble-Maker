@@ -34,7 +34,9 @@ function playKey(freq) {
 }
 //Set frequency value for each piano key
 function setKeys(el) {
-	var keyboard = [['c',0],['cs',0],['d',0],['ds',0],['e',0],['f',0],['fs',0],['g',0],['gs',0],['a',0],['as',0],['b',0]];
+	var keyboard = [['c',0],['cs',0],['d',0],['ds',0],
+	                ['e',0],['f',0],['fs',0],['g',0],
+	                ['gs',0],['a',0],['as',0],['b',0]];
 	var a = (Math.pow(2, 1/12));
 	var f0 = 65.41;
     liFreq = 0;
