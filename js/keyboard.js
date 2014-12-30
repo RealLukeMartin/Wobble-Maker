@@ -7,6 +7,7 @@ var qualify = 0;
 var freqRange = document.getElementById('freq');
 var modFreqRange = document.getElementById('modFreq');
 var modRange = document.getElementById('mod');
+var waveType = 'sawtooth';
 
 
 function playKey(freq) {
@@ -17,7 +18,7 @@ function playKey(freq) {
 	$('#mod, label[for="mod"], #modFreq, label[for="modFreq"]').removeClass('show');
 	// Create OscillatorNode
 	oscillator = context.createOscillator(); // Sound Source
-	oscillator.type = 'sawtooth'; // Sawtooth Wave
+	oscillator.type = waveType; // Sawtooth Wave
 	oscillator.frequency.value = freq;
 	oscillator.start(0);
 
@@ -74,7 +75,7 @@ function modulate(freq) {
 
     console.log(freq);  
 	oscillator.frequency.value = freq;
-	oscillator.type = 'sawtooth';
+	oscillator.type = waveType;
     lfo.frequency.value = parseInt(modRange.value) * 0.08;
 	oscillator.connect(gain);
 	lfo.connect(gain.gain);
