@@ -6,6 +6,9 @@ html, body {
 	color: #fff;
 	font-family: 'Raleway', sans-serif;
 }
+.clear {
+  clear: both;
+}
 .container {
   padding: 0 25px;
 }
@@ -20,7 +23,6 @@ html, body {
 	font-size: 18px;
   border: 1px solid #fff;
   cursor: pointer;
-	//box-shadow: inset 1px 1px 1px #333;
 }
 #offToggle {
 	background-color: #e74c3c;
@@ -54,7 +56,6 @@ input[type="range"] {
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #fff;
-    //box-shadow: inset 1px 1px 1px #333;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -63,8 +64,6 @@ input[type="range"]::-webkit-slider-thumb {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    //border: 2px solid #fff;
-    //box-shadow:1px 1px 1px #333;
 }
 //Keyboard
 #keyboard {
@@ -72,6 +71,8 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
   padding: 0;
   margin: 35px 0 0 10px;
+  display: inline-block;
+  border-top: 10px solid brown;
   li {
   	float: left;
   	width: 50px;
