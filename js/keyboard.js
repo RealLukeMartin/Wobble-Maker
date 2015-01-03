@@ -4,8 +4,6 @@
 var context = new AudioContext();
 var oscillator, gain, lfo;
 var qualify = 0;
-var freqRange = document.getElementById('freq');
-var modFreqRange = document.getElementById('modFreq');
 var modRange = document.getElementById('mod');
 var waveType = 'sawtooth';
 
