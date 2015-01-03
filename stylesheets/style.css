@@ -97,7 +97,6 @@ input[type="range"]::-webkit-slider-thumb {
   padding: 0;
   margin: 35px 0 0 10px;
   display: inline-block;
-  border-top: 10px solid brown;
 }
 /* line 76, ../sass/style.scss */
 #keyboard li {
