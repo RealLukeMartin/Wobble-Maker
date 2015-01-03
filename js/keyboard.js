@@ -7,6 +7,10 @@ var qualify = 0;
 var modRange = document.getElementById('mod');
 var waveType = 'square';
 
+function chooseWave(target) {
+
+  console.log(target.attr('id'));
+}
 
 function playKey(freq) {
 	if (qualify === 1) {
@@ -105,6 +109,9 @@ $('#mod').change(function() {
 });
 $('#offToggle').click(function() {
     off();
+});
+$('.wave-button').click(function() {
+    chooseWave($(this));
 });
 
 })();
