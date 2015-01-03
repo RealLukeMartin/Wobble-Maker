@@ -5,7 +5,7 @@ var context = new AudioContext();
 var oscillator, gain, lfo;
 var qualify = 0;
 var modRange = document.getElementById('mod');
-var waveType = 'sawtooth';
+var waveType = 'square';
 
 
 function playKey(freq) {
@@ -19,7 +19,7 @@ function playKey(freq) {
 	oscillator.type = waveType; // Sawtooth Wave
 	oscillator.frequency.value = freq;
 	oscillator.start(0);
-
+	console.log(waveType);
 	// Create GainNode
 	gain = context.createGain();
 	gain.gain.value = 1; // Set gain to full volume
