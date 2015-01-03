@@ -23,6 +23,9 @@ html, body {
 	font-size: 18px;
   border: 1px solid #fff;
   cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 #offToggle {
 	background-color: #e74c3c;
@@ -112,7 +115,13 @@ input[type="range"]::-webkit-slider-thumb {
   	}
   }
 }
-
+.wave-button {
+  margin-left: 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
+}
 
 
 

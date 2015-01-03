@@ -35,42 +35,46 @@ html, body {
   border: 1px solid #fff;
   cursor: pointer;
 }
+/* line 26, ../sass/style.scss */
+.trigger:hover {
+  opacity: 0.75;
+}
 
-/* line 27, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 #offToggle {
   background-color: #e74c3c;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 #modulate {
   background-color: #3498db;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 form {
   clear: both;
   margin: 10px;
 }
-/* line 36, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 form input[type="range"] {
   display: block;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 #mod, label[for="mod"], #modFreq, label[for="modFreq"] {
   display: none;
 }
-/* line 42, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 #mod.show, label[for="mod"].show, #modFreq.show, label[for="modFreq"].show {
   display: block;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 #freq.hide, label[for="freq"].hide {
   display: none;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 input[type="range"] {
   -webkit-appearance: none;
   background-color: #3498db;
@@ -81,7 +85,7 @@ input[type="range"] {
   border: 1px solid #fff;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: #e74c3c;
@@ -90,7 +94,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 #keyboard {
   list-style: none;
   position: relative;
@@ -98,7 +102,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 35px 0 0 10px;
   display: inline-block;
 }
-/* line 76, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #keyboard li {
   float: left;
   width: 50px;
@@ -110,11 +114,11 @@ input[type="range"]::-webkit-slider-thumb {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
-/* line 87, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 #keyboard li:hover {
   opacity: 0.75;
 }
-/* line 90, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 #keyboard li.sharp {
   width: 30px;
   height: 60px;
@@ -122,23 +126,33 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   z-index: 5;
 }
-/* line 97, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 #keyboard li.sharp.first {
   left: 35px;
 }
-/* line 100, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 #keyboard li.sharp.second {
   left: 85px;
 }
-/* line 103, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 #keyboard li.sharp.third {
   left: 185px;
 }
-/* line 106, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 #keyboard li.sharp.fourth {
   left: 235px;
 }
-/* line 109, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 #keyboard li.sharp.fifth {
   left: 285px;
+}
+
+/* line 118, ../sass/style.scss */
+.wave-button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* line 121, ../sass/style.scss */
+.wave-button:hover {
+  opacity: 0.75;
 }
