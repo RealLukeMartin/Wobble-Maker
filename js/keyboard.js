@@ -1,11 +1,11 @@
 (function(){
 
 // Create audio container
-var context = new AudioContext();
-var oscillator, gain, lfo;
-var qualify = 0;
-var modRange = document.getElementById('mod');
-var waveType = 'square';
+var context = new AudioContext(),
+oscillator, gain, lfo,
+qualify = 0,
+modRange = document.getElementById('mod'),
+waveType = 'square';
 
 function chooseWave(target) {
 
